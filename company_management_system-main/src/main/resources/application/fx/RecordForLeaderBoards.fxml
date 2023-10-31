@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label alignment="CENTER" prefHeight="50.0" prefWidth="380.0" text="Full Name" />
+        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="130.0" text="Time Spent" />
+        <Label alignment="CENTER" layoutX="133.0" layoutY="10.0" prefHeight="50.0" prefWidth="120.0" text="Tasks completed" />
+      <ImageView fitHeight="49.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</HBox>

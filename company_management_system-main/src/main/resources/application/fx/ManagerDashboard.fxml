@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1088.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.fx.ManagerDashboardController">
+    <children>
+        <VBox prefHeight="620.0" prefWidth="223.0" style="-fx-background-color: #214d87;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#toHome" prefHeight="154.0" prefWidth="223.0" style="-fx-background-color: #5e94da; -fx-text-fill: #ffffff; -fx-font-size: 15;                         -fx-border-color: #547aac;" text="Management System" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#toLeaderboards" prefHeight="86.0" prefWidth="231.0" style="-fx-background-color: #5e94da;                         -fx-text-fill: #ffffff; -fx-font-size: 15; -fx-border-color: #547aac;" text="Leaderboards" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="96.0" mnemonicParsing="false" onAction="#toInfo" prefHeight="86.0" prefWidth="231.0" style="-fx-background-color: #5e94da;                         -fx-text-fill: #ffffff; -fx-font-size: 15; -fx-border-color: #547aac;" text="Info" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="183.0" mnemonicParsing="false" onAction="#signOut" prefHeight="86.0" prefWidth="231.0" style="-fx-background-color: #5e94da;                         -fx-text-fill: #ffffff; -fx-font-size: 15; -fx-border-color: #547aac;" text="Sign Out" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <Label fx:id="orgName" alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" prefHeight="106.0" prefWidth="866.0" style="-fx-background-color: #5e94da; -fx-text-fill: #ffffff;" text="Name of Organization">
+            <font>
+                <Font name="Segoe UI" size="50.0" />
+            </font>
+        </Label>
+        <HBox layoutX="223.0" layoutY="106.0" prefHeight="58.0" prefWidth="866.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#addingNewTask" prefHeight="35.0" prefWidth="120.0" style="-fx-background-radius: 30; -fx-background-color: #5e94da; -fx-text-fill: #ffffff;" text="+ Add new task">
+                    <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#enteringNewEmployee" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-background-color: #5e94da;                         -fx-text-fill: #ffffff;" text="+ Add new employee">
+                    <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#allTimeoffs" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-background-color: #5e94da;                         -fx-text-fill: #ffffff;" text="See all time offs">
+                    <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#deleteTask" prefHeight="35.0" prefWidth="105.0" style="-fx-background-radius: 20; -fx-background-color: #5e94da;                         -fx-text-fill: #ffffff;" text="Delete task">
+                    <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#approveTask" prefHeight="35.0" prefWidth="113.0" style="-fx-background-radius: 20; -fx-background-color: #5e94da;                         -fx-text-fill: #ffffff;" text="Approve task">
+                    <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <ComboBox fx:id="employeesCombobox" onAction="#selectEmployee" prefWidth="150.0" promptText="employee" style="-fx-background-radius: 20;">
+                    <HBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                    </HBox.margin>
+                </ComboBox>
+            </children>
+        </HBox>
+        <ScrollPane layoutX="223.0" layoutY="206.0" prefHeight="407.0" prefWidth="860.0" style="-fx-background-color: #fff;">
+            <content>
+                <VBox fx:id="items" prefHeight="403.0" prefWidth="858.0" />
+            </content>
+        </ScrollPane>
+        <HBox layoutX="223" layoutY="164" prefHeight="44.0" prefWidth="866.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="40.0" prefWidth="100.0" text="Choice">
+                    <font>
+                        <Font name="Segoe UI" size="12.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="150.0" text="Task type">
+                    <font>
+                        <Font name="Segoe UI" size="12.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="110.0" layoutY="10.0" prefHeight="40.0" prefWidth="260.0" text="Description">
+                    <font>
+                        <Font name="Segoe UI" size="12.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="40.0" prefWidth="150.0" text="Assignee">
+                    <font>
+                        <Font name="Segoe UI" size="12.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="40.0" prefWidth="103.0" text="Status">
+                    <font>
+                        <Font name="Segoe UI" size="12.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="685.0" layoutY="10.0" prefHeight="40.0" prefWidth="103.0" text="Deadline">
+                    <font>
+                        <Font name="Segoe UI" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+      <ImageView fx:id="notification" fitHeight="46.0" fitWidth="42.0" layoutX="1038.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</AnchorPane>

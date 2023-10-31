@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1041.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.fx.LeaderBoardsController">
+    <children>
+        <VBox prefHeight="620.0" prefWidth="223.0" style="-fx-background-color: #214d87;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#toHome" prefHeight="154.0" prefWidth="223.0" style="-fx-background-color: #5e94da; -fx-text-fill: #ffffff; -fx-font-size: 15;                         -fx-border-color: #547aac;" text="Management System" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#toLeaderboards" prefHeight="86.0" prefWidth="231.0" style="-fx-background-color: #5e94da;                         -fx-text-fill: #ffffff; -fx-font-size: 15; -fx-border-color: #547aac;" text="Leaderboards" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="96.0" mnemonicParsing="false" onAction="#toInfo" prefHeight="86.0" prefWidth="231.0" style="-fx-background-color: #5e94da;                         -fx-text-fill: #ffffff; -fx-font-size: 15; -fx-border-color: #547aac;" text="Info" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="183.0" mnemonicParsing="false" onAction="#signOut" prefHeight="86.0" prefWidth="231.0" style="-fx-background-color: #5e94da;                         -fx-text-fill: #ffffff; -fx-font-size: 15; -fx-border-color: #547aac;" text="Sign Out" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <ScrollPane layoutX="223.0" layoutY="78.0" prefHeight="545.0" prefWidth="806.0">
+            <content>
+                <VBox fx:id="records" prefHeight="542.0" prefWidth="801.0" />
+            </content>
+        </ScrollPane>
+        <HBox layoutX="223.0" layoutY="-1.0" prefHeight="79.0" prefWidth="806.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="79.0" prefWidth="416.0" text="Name">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="label1" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="170.0" prefWidth="170.0" text="Worked (h.)">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="label2" alignment="CENTER" layoutX="160.0" layoutY="10.0" prefHeight="170.0" prefWidth="170.0" text="Required (h.)">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="sortByComboBox" onAction="#changeSorting" prefHeight="39.0" prefWidth="186.0" promptText="worked hours">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" top="20.0" />
+                    </HBox.margin>
+                </ComboBox>
+            </children>
+        </HBox>
+      <Label layoutX="890.0" prefHeight="18.0" prefWidth="78.0" text="Sort by:" />
+    </children>
+</AnchorPane>

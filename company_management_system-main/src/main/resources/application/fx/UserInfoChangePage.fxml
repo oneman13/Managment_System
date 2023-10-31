@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.fx.UserInfoChangePageController">
+    <children>
+        <VBox prefHeight="620.0" prefWidth="223.0" style="-fx-background-color: #214d87;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#toHome" prefHeight="154.0" prefWidth="223.0" style="-fx-background-color: #5e94da; -fx-text-fill: #ffffff; -fx-font-size: 15;                         -fx-border-color: #547aac;" text="Management System" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#toLeaderboards" prefHeight="86.0" prefWidth="231.0" style="-fx-background-color: #5e94da;                         -fx-text-fill: #ffffff; -fx-font-size: 15; -fx-border-color: #547aac;" text="Leaderboards" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="96.0" mnemonicParsing="false" onAction="#toInfo" prefHeight="86.0" prefWidth="231.0" style="-fx-background-color: #5e94da;                         -fx-text-fill: #ffffff; -fx-font-size: 15; -fx-border-color: #547aac;" text="Info" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="183.0" mnemonicParsing="false" onAction="#signOut" prefHeight="86.0" prefWidth="231.0" style="-fx-background-color: #5e94da;                         -fx-text-fill: #ffffff; -fx-font-size: 15; -fx-border-color: #547aac;" text="Sign Out" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <VBox layoutX="247.0" layoutY="138.0" prefHeight="366.0" prefWidth="470.0">
+            <children>
+                <Label fx:id="mainLabel" prefHeight="50.0" prefWidth="100.0" text="Full name" />
+                <TextField fx:id="fullNameField" prefHeight="30.0" style="-fx-background-radius: 20;" />
+                <Label prefHeight="50.0" prefWidth="100.0" text="Email" />
+                <TextField fx:id="emailField" prefHeight="30.0" style="-fx-background-radius: 20;" />
+                <HBox>
+                    <VBox.margin>
+                        <Insets bottom="5.0" top="15.0" />
+                    </VBox.margin>
+                    <Button mnemonicParsing="false" onAction="#submitChanges" prefHeight="20.0" prefWidth="100.0" style="-fx-background-radius: 15; -fx-background-color: #5e94da; -fx-text-fill: #fff;" text="Update" />
+                    <HBox>
+                        <Label prefHeight="50.0" prefWidth="10.0" />
+                    </HBox>
+                    <Button layoutX="450" mnemonicParsing="false" onAction="#cancelChanging" prefHeight="20.0" prefWidth="100.0" style="-fx-background-radius: 15; -fx-background-color: #5e94da; -fx-text-fill: #fff;" text="Cancel" />
+               <HBox layoutX="110.0" layoutY="10.0">
+                  <children>
+                     <Label prefHeight="50.0" prefWidth="10.0" />
+                  </children>
+               </HBox>
+               <Button layoutX="120.0" layoutY="10.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="26.0" prefWidth="133.0" style="-fx-background-radius: 15; -fx-background-color: #5e94da; -fx-text-fill: #fff;" text="Change password" />
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
